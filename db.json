@@ -1,0 +1,74 @@
+{
+  "profile": {
+    "name": "Ralfi Poluakan",
+    "role": "Full Stack Developer & Finance Professional",
+    "bio": "Passionate about bridging technology and finance to create innovative solutions that drive organizational success and digital transformation.",
+    "photo": "/4x6.jpg"
+  },
+  "experience": [
+    {
+      "id": 1,
+      "title": "Head of Finance",
+      "company": "UVICS",
+      "duration": "2024",
+      "description": "Managed organizational budgeting and fund allocation.",
+      "achievements": [
+        "Successfully managed annual budget allocation",
+        "Implemented cost-saving measures",
+        "Streamlined financial reporting processes"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Treasurer",
+      "company": "PROXO CORIS International",
+      "duration": "2023",
+      "description": "Raised 66 million through sponsorship collaboration.",
+      "achievements": [
+        "Secured 66 million in sponsorship funds",
+        "Managed financial operations for international events",
+        "Coordinated with multiple stakeholders for funding"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Full Stack Developer (Freelance)",
+      "company": "Remote",
+      "duration": "2023 – Present",
+      "description": "Developed responsive web applications using React, Node.js, Express, and modern UI/UX principles. Improved deployment efficiency and optimized backend logic for scalability.",
+      "achievements": [
+        "Built responsive web applications with React",
+        "Optimized backend performance and scalability",
+        "Implemented modern UI/UX design principles"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Finance & Technology Integration Specialist",
+      "company": "Manado, Indonesia",
+      "duration": "2022 – Present",
+      "description": "Specializing in bridging financial operations with digital transformation initiatives. Designed automation workflows, managed budgeting systems, and deployed digital tools to increase team productivity.",
+      "achievements": [
+        "Designed automation workflows for financial processes",
+        "Managed budgeting systems and digital tools",
+        "Increased team productivity through technology integration"
+      ]
+    }
+  ],
+  "certificates": [
+    { "id": 1, "title": "UVICSxUALS Workshop Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.49.13.jpeg" },
+    { "id": 2, "title": "Steering Committee PPI Tiongkok Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.49.41.jpeg" },
+    { "id": 3, "title": "PROXOCORIS International Competition Treasurer Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.50.03.jpeg" },
+    { "id": 4, "title": "UVICS Division Mentoring Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.50.22.jpeg" }
+  ],
+  "contact": {
+    "email": "ralfipoluakan@gmail.com",
+    "phone": "+62 812 4198 8202",
+    "location": "Manado, North Sulawesi, Indonesia"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/ralmarcel_",
+    "github": "https://github.com/ralmarcel",
+    "linkedin": "https://www.linkedin.com/in/marcelo-ralfi-poluakan-0313a4389"
+  }
+}
