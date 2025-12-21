@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Calendar, User, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Calendar, User, Tag, ChevronLeft, ChevronRight, Github } from 'lucide-react';
 
 const Projects = ({ data }) => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -95,11 +95,23 @@ const Projects = ({ data }) => {
                 </div>
 
                 {/* Project Meta */}
-                <div className="flex items-center gap-4 text-sm text-foreground/60">
+                <div className="flex items-center gap-4 text-sm text-foreground/60 flex-wrap">
                   <div className="flex items-center gap-1">
                     <User size={14} />
                     <span>{project.role}</span>
                   </div>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center gap-1 hover:text-primary transition-colors"
+                    >
+                      <Github size={14} />
+                      <span>GitHub</span>
+                    </a>
+                  )}
                   {project.liveDemo && (
                     <a
                       href={project.liveDemo}
@@ -209,6 +221,17 @@ const Projects = ({ data }) => {
                     <span className="font-medium">Type:</span>
                     <span>{selectedProject.type}</span>
                   </div>
+                  {selectedProject.githubLink && (
+                    <a
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-primary hover:underline"
+                    >
+                      <Github size={18} />
+                      <span>View on GitHub</span>
+                    </a>
+                  )}
                   {selectedProject.liveDemo && (
                     <a
                       href={selectedProject.liveDemo}
@@ -273,4 +296,5 @@ const Projects = ({ data }) => {
 };
 
 export default Projects;
+
 

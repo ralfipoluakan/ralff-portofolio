@@ -73,6 +73,7 @@
       "subtitle": "Portal Informasi Organisasi Kemahasiswaan",
       "role": "Frontend Developer",
       "type": "Full-Stack Web Application",
+      "githubLink": "https://github.com/ralfipoluakan/Portal-Informasi-Organisasi-Kemahasiswaan",
       "image": "/projects/ukhub.jpg",
       "description": "Portal web terintegrasi untuk manajemen informasi organisasi kemahasiswaan dengan sistem multi-role access. Platform ini memungkinkan Admin, Dosen Pembina, dan Mahasiswa mengelola serta mengakses data organisasi, ruangan, kegiatan, dan pengumuman secara terpusat dan real-time.",
       "techStack": ["React 19", "Vite", "TailwindCSS", "React Router DOM", "Context API"],
@@ -93,6 +94,7 @@
       "type": "Full-Stack Web Application",
       "timeline": "Oktober 2026 – November 2026",
       "liveDemo": "https://braveverse.my.id",
+      "githubLink": "https://github.com/ralfipoluakan/E-commerce-Platform",
       "image": "/projects/braveverse.jpg",
       "description": "Platform e-commerce skincare yang berfokus pada brand Korea seperti SKIN1004, LANEIGE, COSRX, Beauty of Joseon, dan ROUND LAB. Platform ini mendukung multiple payment methods melalui Midtrans serta AI-powered customer support menggunakan Google Gemini.",
       "techStack": ["Node.js", "Express.js", "Vanilla JavaScript", "Midtrans API", "Google Gemini API", "Nginx", "VPS"],
@@ -112,6 +114,7 @@
       "role": "Full-Stack Developer",
       "type": "Full-Stack Web Application",
       "timeline": "Oktober – November 2026",
+      "githubLink": "https://github.com/ralfipoluakan/Sistem-Informasi-Manajemen-Klinik-Berbasis-Web/tree/main/Desktop/SEMESTER%205/Sistem%20Manajemen%20Operasional%20Klinik%20Berbasis%20Web",
       "images": [
         "/projects/klinik-latest.jpg"
       ],

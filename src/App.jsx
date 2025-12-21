@@ -74,8 +74,8 @@ function App() {
       <Header />
       <Hero data={data} />
       <About />
-      <ExperienceList data={data} />
       <Projects data={data} />
+      <ExperienceList data={data} />
       <Certificates data={data} />
       <Contact data={data} />
       <Footer data={data} />
