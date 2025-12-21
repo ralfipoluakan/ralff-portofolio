@@ -113,12 +113,9 @@
       "type": "Full-Stack Web Application",
       "timeline": "Oktober – November 2026",
       "images": [
-        "/projects/klinik-admin.jpg",
-        "/projects/klinik-dokter.jpg",
-        "/projects/klinik-apoteker.jpg",
-        "/projects/klinik-kepala.jpg"
+        "/projects/klinik-latest.jpg"
       ],
-      "image": "/projects/klinik-admin.jpg",
+      "image": "/projects/klinik-latest.jpg",
       "description": "Sistem informasi manajemen klinik komprehensif yang dirancang untuk mengotomatisasi seluruh operasional klinik kesehatan. Sistem ini mendukung multi-role access dengan fitur utama seperti manajemen antrian real-time, rekam medis digital, sistem resep & inventori obat, pembayaran terintegrasi, serta dashboard analitik eksekutif.",
       "techStack": ["FastAPI", "SQLAlchemy", "SQLite", "React 19", "Vite", "TailwindCSS", "Zustand", "Recharts"],
       "keyFeatures": [
