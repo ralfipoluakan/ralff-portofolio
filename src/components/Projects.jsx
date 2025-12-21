@@ -112,18 +112,6 @@ const Projects = ({ data }) => {
                       <span>GitHub</span>
                     </a>
                   )}
-                  {project.liveDemo && (
-                    <a
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex items-center gap-1 hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={14} />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
                 </div>
               </div>
             </motion.div>
@@ -230,17 +218,6 @@ const Projects = ({ data }) => {
                     >
                       <Github size={18} />
                       <span>View on GitHub</span>
-                    </a>
-                  )}
-                  {selectedProject.liveDemo && (
-                    <a
-                      href={selectedProject.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary hover:underline"
-                    >
-                      <ExternalLink size={18} />
-                      <span>View Live Demo</span>
                     </a>
                   )}
                 </div>
