@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const ExperienceItem = ({ experience, index }) => {
   console.log('ExperienceItem rendering with experience:', experience, 'index:', index);
@@ -24,15 +24,9 @@ const ExperienceItem = ({ experience, index }) => {
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 {experience.title}
               </h3>
-              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-foreground/60">
-                <div className="flex items-center gap-2">
-                  <MapPin size={16} />
-                  <span className="font-medium">{experience.company}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar size={16} />
-                  <span>{experience.duration}</span>
-                </div>
+              <div className="flex items-center gap-2 text-foreground/60">
+                <Calendar size={16} />
+                <span>{experience.duration}</span>
               </div>
             </div>
           </div>

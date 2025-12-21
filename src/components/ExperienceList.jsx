@@ -39,8 +39,7 @@ const ExperienceList = ({ data }) => {
             Professional <span className="text-gradient animate-glow">Experience</span>
           </h2>
           <p className="text-xl text-foreground/60 max-w-3xl mx-auto animate-slide-in-right">
-            A journey through leadership roles and technical expertise that shaped my career
-            in technology and finance.
+            A progression of leadership and technical roles that reflect hands-on experience in system development, organizational management, and operational responsibility.
           </p>
         </motion.div>
 

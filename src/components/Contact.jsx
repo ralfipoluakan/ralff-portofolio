@@ -1,29 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = ({ data }) => {
   console.log('Contact received:', data);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-  };
 
   // Fallback if no data
   const contact = data?.contact || {};
@@ -33,8 +13,8 @@ const Contact = ({ data }) => {
     {
       icon: Mail,
       label: 'Email',
-      value: contact.email || 'ralfipoluakan@gmail.com',
-      href: `mailto:${contact.email || 'ralfipoluakan@gmail.com'}`
+      value: contact.email || 'ralffpoluakan@gmail.com',
+      href: `mailto:${contact.email || 'ralffpoluakan@gmail.com'}`
     },
     {
       icon: Phone,
@@ -76,7 +56,7 @@ const Contact = ({ data }) => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -137,77 +117,6 @@ const Contact = ({ data }) => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="glass rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-foreground placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground/80 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-foreground placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground/80 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-foreground placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full btn-primary py-4 text-lg font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2"
-                >
-                  <Send size={20} />
-                  Send Message
-                </motion.button>
-              </form>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

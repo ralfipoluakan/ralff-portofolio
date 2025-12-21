@@ -33,7 +33,7 @@ const Footer = ({ data }) => {
               {profile.name || 'Ralfi Poluakan'}
             </h3>
             <p className="text-foreground/60 max-w-md mx-auto animate-slide-in-left">
-              {profile.bio || 'Full Stack Developer & Finance Professional passionate about creating innovative solutions that bridge technology and business.'}
+              Building scalable, real-world web systems across healthcare, e-commerce, and organizational platforms.
             </p>
           </motion.div>
 

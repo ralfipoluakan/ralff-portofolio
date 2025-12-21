@@ -6,6 +6,7 @@ import ExperienceList from "./components/ExperienceList";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import dbData from "../db.json";
 
 function App() {
   const [data, setData] = useState(null);
@@ -13,25 +14,23 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch all data from separate endpoints
-    Promise.all([
-      fetch("http://localhost:3002/profile").then(res => res.json()),
-      fetch("http://localhost:3002/experience").then(res => res.json()),
-      fetch("http://localhost:3002/certificates").then(res => res.json()),
-      fetch("http://localhost:3002/contact").then(res => res.json()),
-      fetch("http://localhost:3002/social").then(res => res.json())
-    ])
-      .then(([profile, experience, certificates, contact, social]) => {
-        const allData = { profile, experience, certificates, contact, social };
-        console.log("ALL DATA RECEIVED:", allData);
-        setData(allData);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("FETCH ERROR:", err);
-        setError(err);
-        setLoading(false);
-      });
+    // Load data directly from imported JSON file
+    try {
+      const allData = {
+        profile: dbData.profile,
+        experience: dbData.experience,
+        certificates: dbData.certificates,
+        contact: dbData.contact,
+        social: dbData.social
+      };
+      console.log("ALL DATA LOADED:", allData);
+      setData(allData);
+      setLoading(false);
+    } catch (err) {
+      console.error("DATA LOAD ERROR:", err);
+      setError(err);
+      setLoading(false);
+    }
   }, []);
 
   // 👉 PRELOADER

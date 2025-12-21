@@ -1,57 +1,68 @@
 {
   "profile": {
     "name": "Ralfi Poluakan",
-    "role": "Full Stack Developer & Finance Professional",
-    "bio": "Passionate about bridging technology and finance to create innovative solutions that drive organizational success and digital transformation.",
+    "role": "Full Stack Developer & Information Systems Student",
+    "bio": "Building scalable web applications and enterprise systems with real world impact, Designing and building end-to-end web systems with real-world impact spanning healthcare management, e-commerce platforms, and organizational platforms.",
     "photo": "/4x6.jpg"
   },
   "experience": [
     {
       "id": 1,
-      "title": "Head of Finance",
-      "company": "UVICS",
-      "duration": "2024",
-      "description": "Managed organizational budgeting and fund allocation.",
+      "title": "Full-Stack Developer (Academic & Personal Projects)",
+      "company": "",
+      "duration": "2024 – Present",
+      "description": "Designed and developed full-stack web applications as part of academic and independent projects. Built real-world systems including organizational information platforms, e-commerce applications with payment gateway and AI integration, and healthcare management information systems.",
       "achievements": [
-        "Successfully managed annual budget allocation",
-        "Implemented cost-saving measures",
-        "Streamlined financial reporting processes"
+        "Developed role-based and workflow-driven web systems",
+        "Implemented RESTful APIs, dashboards, and real-time features",
+        "Applied clean architecture, state management, and responsive design principles"
       ]
     },
     {
       "id": 2,
-      "title": "Treasurer",
-      "company": "PROXO CORIS International",
-      "duration": "2023",
-      "description": "Raised 66 million through sponsorship collaboration.",
+      "title": "Treasurer at UVICS (UNKLAB Virtue in Computer Science)",
+      "company": "",
+      "duration": "August 2023 – January 2026",
+      "description": "Managed financial planning and budgeting for academic and organizational activities. Oversaw fund allocation, expense tracking, and transparent financial reporting. Supported workshops, mentoring sessions, and internal academic programs through effective financial coordination.",
       "achievements": [
-        "Secured 66 million in sponsorship funds",
-        "Managed financial operations for international events",
-        "Coordinated with multiple stakeholders for funding"
+        "Managed organizational budgeting and cash flow",
+        "Maintained accountable and transparent financial reports",
+        "Supported multiple technology-focused events and programs"
       ]
     },
     {
       "id": 3,
-      "title": "Full Stack Developer (Freelance)",
-      "company": "Remote",
-      "duration": "2023 – Present",
-      "description": "Developed responsive web applications using React, Node.js, Express, and modern UI/UX principles. Improved deployment efficiency and optimized backend logic for scalability.",
+      "title": "Treasurer at PROXOCORIS International Competition 2025",
+      "company": "",
+      "duration": "December 2024 – April 2025",
+      "description": "Managed event finances from initial planning to execution, handling a total budget exceeding IDR 60 million. Coordinated fundraising and sponsorship acquisition with external partners.",
       "achievements": [
-        "Built responsive web applications with React",
-        "Optimized backend performance and scalability",
-        "Implemented modern UI/UX design principles"
+        "Successfully managed large-scale event finances end-to-end",
+        "Secured sponsorships from industry partners such as Dicoding and AD Produksi",
+        "Ensured smooth financial operations throughout the event lifecycle"
       ]
     },
     {
       "id": 4,
-      "title": "Finance & Technology Integration Specialist",
-      "company": "Manado, Indonesia",
-      "duration": "2022 – Present",
-      "description": "Specializing in bridging financial operations with digital transformation initiatives. Designed automation workflows, managed budgeting systems, and deployed digital tools to increase team productivity.",
+      "title": "Treasurer at UVICS Workshop × SMP UALS",
+      "company": "",
+      "duration": "July 2025",
+      "description": "Managed financial operations for an educational workshop themed \"Fundamentals of Computational Thinking and Programming with Scratch\". Ensured budget sufficiency, expense distribution, and financial transparency.",
       "achievements": [
-        "Designed automation workflows for financial processes",
-        "Managed budgeting systems and digital tools",
-        "Increased team productivity through technology integration"
+        "Planned and managed workshop budget",
+        "Maintained clear financial records",
+        "Supported successful execution of a technology education program"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Mentor at UVICS (Competition Handler Division)",
+      "company": "",
+      "duration": "June 2025",
+      "description": "Served as a mentor in a session titled \"Effective Communication & Professional Written Communication\". Provided guidance on professional communication and written strategy for competitive environments.",
+      "achievements": [
+        "Delivered mentoring on communication and problem-solving",
+        "Supported member development in academic competition contexts"
       ]
     }
   ],
@@ -62,13 +73,13 @@
     { "id": 4, "title": "UVICS Division Mentoring Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.50.22.jpeg" }
   ],
   "contact": {
-    "email": "ralfipoluakan@gmail.com",
+    "email": "ralffpoluakan@gmail.com",
     "phone": "+62 812 4198 8202",
     "location": "Manado, North Sulawesi, Indonesia"
   },
   "social": {
     "instagram": "https://www.instagram.com/ralmarcel_",
-    "github": "https://github.com/ralmarcel",
+    "github": "https://github.com/ralfipoluakan",
     "linkedin": "https://www.linkedin.com/in/marcelo-ralfi-poluakan-0313a4389"
   }
 }
