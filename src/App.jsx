@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import ExperienceList from "./components/ExperienceList";
-import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -20,7 +19,6 @@ function App() {
       const allData = {
         profile: dbData.profile,
         experience: dbData.experience,
-        projects: dbData.projects || [],
         certificates: dbData.certificates,
         contact: dbData.contact,
         social: dbData.social
@@ -75,7 +73,6 @@ function App() {
       <Hero data={data} />
       <About />
       <ExperienceList data={data} />
-      <Projects data={data} />
       <Certificates data={data} />
       <Contact data={data} />
       <Footer data={data} />

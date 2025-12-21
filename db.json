@@ -66,67 +66,6 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "id": 1,
-      "title": "UKHUB – Portal Informasi Organisasi Kemahasiswaan",
-      "subtitle": "Portal Informasi Organisasi Kemahasiswaan",
-      "role": "Frontend Developer",
-      "type": "Full-Stack Web Application",
-      "image": "/projects/ukhub.jpg",
-      "description": "Portal web terintegrasi untuk manajemen informasi organisasi kemahasiswaan dengan sistem multi-role access. Platform ini memungkinkan Admin, Dosen Pembina, dan Mahasiswa mengelola serta mengakses data organisasi, ruangan, kegiatan, dan pengumuman secara terpusat dan real-time.",
-      "techStack": ["React 19", "Vite", "TailwindCSS", "React Router DOM", "Context API"],
-      "keyFeatures": [
-        "Multi-role authentication system (Admin, Dosen, Mahasiswa)",
-        "3 dashboard berbeda sesuai role pengguna",
-        "CRUD operations untuk organisasi, ruangan, kegiatan, dan pengumuman",
-        "Dark/light mode dengan localStorage persistence",
-        "Mobile-first responsive design",
-        "Global search dengan filter dan tipe pencarian"
-      ]
-    },
-    {
-      "id": 2,
-      "title": "BraveVerse Beauty",
-      "subtitle": "Platform E-Commerce Skincare dengan Payment Gateway & AI Integration",
-      "role": "Full-Stack Developer",
-      "type": "Full-Stack Web Application",
-      "timeline": "Oktober 2026 – November 2026",
-      "liveDemo": "https://braveverse.my.id",
-      "image": "/projects/braveverse.jpg",
-      "description": "Platform e-commerce skincare yang berfokus pada brand Korea seperti SKIN1004, LANEIGE, COSRX, Beauty of Joseon, dan ROUND LAB. Platform ini mendukung multiple payment methods melalui Midtrans serta AI-powered customer support menggunakan Google Gemini.",
-      "techStack": ["Node.js", "Express.js", "Vanilla JavaScript", "Midtrans API", "Google Gemini API", "Nginx", "VPS"],
-      "keyFeatures": [
-        "Payment gateway integration (Midtrans) dengan berbagai metode pembayaran",
-        "Shopping cart dengan real-time quantity management",
-        "AI-powered customer support menggunakan Google Gemini",
-        "Product catalog multi-brand dengan filtering",
-        "Checkout flow dengan customer data input",
-        "Fully deployed & production-ready application"
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Klinik Sentosa",
-      "subtitle": "Sistem Manajemen Operasional Klinik Berbasis Web",
-      "role": "Full-Stack Developer",
-      "type": "Full-Stack Web Application",
-      "timeline": "Oktober – November 2026",
-      "image": "/projects/klinik-sentosa.jpg",
-      "description": "Sistem informasi manajemen klinik komprehensif yang dirancang untuk mengotomatisasi seluruh operasional klinik kesehatan. Sistem ini mendukung multi-role access dengan fitur utama seperti manajemen antrian real-time, rekam medis digital, sistem resep & inventori obat, pembayaran terintegrasi, serta dashboard analitik eksekutif.",
-      "techStack": ["FastAPI", "SQLAlchemy", "SQLite", "React 19", "Vite", "TailwindCSS", "Zustand", "Recharts"],
-      "keyFeatures": [
-        "Multi-role authentication & authorization (Admin, Dokter, Apoteker, Kepala Klinik)",
-        "Real-time queue management dengan workflow tracking",
-        "Digital medical records dengan anamnesa dan diagnosa",
-        "Prescription & pharmacy system terintegrasi dengan stok",
-        "Payment & billing system dengan perhitungan otomatis",
-        "Reporting & analytics dashboard dengan data visualization",
-        "Schedule management untuk dokter",
-        "Executive dashboard untuk pengambilan keputusan strategis"
-      ]
-    }
-  ],
   "certificates": [
     { "id": 1, "title": "UVICSxUALS Workshop Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.49.13.jpeg" },
     { "id": 2, "title": "Steering Committee PPI Tiongkok Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.49.41.jpeg" },
