@@ -17,12 +17,11 @@ const Hero = ({ data }) => {
   const firstName = nameParts[0] || 'Ralfi';
   const lastName = nameParts.slice(1).join(' ') || 'Poluakan';
 
-  // Contact icons data
+  // Contact icons data (only email, phone, instagram)
   const contactIcons = [
     { icon: Mail, href: `mailto:${contact.email || 'ralffpoluakan@gmail.com'}`, label: 'Email' },
     { icon: Phone, href: `tel:${contact.phone?.replace(/\s/g, '') || '+6281241988202'}`, label: 'Phone' },
-    { icon: Instagram, href: social.instagram || '#', label: 'Instagram' },
-    { icon: MapPin, href: '#', label: 'Location' }
+    { icon: Instagram, href: social.instagram || '#', label: 'Instagram' }
   ].filter(item => item.href !== '#');
 
   return (
@@ -53,76 +52,70 @@ const Hero = ({ data }) => {
 
       {/* Content */}
       <div className="container-custom px-6 md:px-12 relative z-10 w-full">
-        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
-          {/* Left Side - Vertical Contact Icons */}
+        <div className="max-w-4xl">
+          {/* Status Indicator */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col gap-6 mt-8 md:mt-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex items-center gap-2 mb-8"
+          >
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+            <span className="text-white/80 text-sm font-light tracking-wider uppercase">OPEN TO WORK</span>
+          </motion.div>
+
+          {/* Role/Title */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-white/70 font-light mb-6 tracking-wide"
+          >
+            {profile.role || 'Full Stack Developer & Information Systems Student'}
+          </motion.h2>
+
+          {/* Name Typography */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-8 leading-tight"
+          >
+            <span className="text-white">{firstName}</span>
+            <br />
+            <span className="text-white/40">{lastName}</span>
+          </motion.h1>
+
+          {/* Bio */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-base sm:text-lg md:text-xl text-white/80 font-light max-w-2xl leading-relaxed mb-6 md:mb-8"
+          >
+            {profile.bio}
+          </motion.p>
+
+          {/* Contact Icons - Below Bio */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex items-center gap-4 md:gap-6"
           >
             {contactIcons.map((item, index) => (
               <motion.a
                 key={item.label}
                 href={item.href}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors duration-300"
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors duration-300"
                 aria-label={item.label}
               >
                 <item.icon size={24} />
               </motion.a>
             ))}
           </motion.div>
-
-          {/* Main Content - Left Aligned */}
-          <div className="flex-1 max-w-4xl">
-            {/* Status Indicator */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex items-center gap-2 mb-8"
-            >
-              <div className="w-2 h-2 bg-white rounded-full"></div>
-              <span className="text-white/80 text-sm font-light tracking-wider uppercase">OPEN TO WORK</span>
-            </motion.div>
-
-            {/* Role/Title */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl text-white/70 font-light mb-6 tracking-wide"
-            >
-              {profile.role || 'Full Stack Developer & Information Systems Student'}
-            </motion.h2>
-
-            {/* Name Typography */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-8 leading-tight"
-            >
-              <span className="text-white">{firstName}</span>
-              <br />
-              <span className="text-white/40">{lastName}</span>
-            </motion.h1>
-
-            {/* Bio */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base sm:text-lg md:text-xl text-white/80 font-light max-w-2xl leading-relaxed mb-8 md:mb-12"
-            >
-              {profile.bio}
-            </motion.p>
-          </div>
         </div>
       </div>
     </section>
