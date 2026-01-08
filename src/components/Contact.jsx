@@ -39,7 +39,7 @@ const Contact = ({ data }) => {
   console.log('Contact: Rendering with contact data:', contact);
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-b from-slate-800 to-slate-900">
+    <section id="contact" className="section-padding bg-black">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -48,10 +48,10 @@ const Contact = ({ data }) => {
           viewport={{ once: true }}
           className="text-center mb-16 animate-fade-in-up"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Get In <span className="text-gradient animate-glow">Touch</span>
+          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
+            Get In <span className="text-white/50">Touch</span>
           </h2>
-          <p className="text-xl text-foreground/60 max-w-3xl mx-auto animate-slide-in-right">
+          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-right font-light leading-relaxed">
             Ready to collaborate? Let's discuss how we can work together to bring your ideas to life.
           </p>
         </motion.div>
@@ -66,8 +66,8 @@ const Contact = ({ data }) => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Let's Connect</h3>
-              <p className="text-foreground/70 mb-8">
+              <h3 className="text-2xl font-light text-white mb-6">Let's Connect</h3>
+              <p className="text-white/70 mb-8 font-light">
                 I'm always interested in new opportunities and exciting projects.
                 Whether you have a question or just want to say hi, feel free to reach out!
               </p>
@@ -84,19 +84,19 @@ const Contact = ({ data }) => {
                   viewport={{ once: true }}
                   className="flex items-center gap-4 p-4 glass rounded-2xl hover:scale-105 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/10">
                     <info.icon size={24} className="text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-foreground/60">{info.label}</p>
-                    <p className="text-foreground font-medium">{info.value}</p>
+                    <p className="text-sm text-white/60">{info.label}</p>
+                    <p className="text-white font-light">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">Follow Me</h4>
+              <h4 className="text-lg font-light text-white mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a

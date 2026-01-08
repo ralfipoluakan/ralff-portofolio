@@ -10,7 +10,7 @@ const ExperienceList = ({ data }) => {
   if (!experiences.length) {
     console.log('ExperienceList: No experience data, showing fallback');
     return (
-      <section id="experience" className="section-padding bg-gradient-to-b from-slate-800 to-slate-900">
+      <section id="experience" className="section-padding bg-black">
         <div className="container-custom text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Professional <span className="text-gradient">Experience</span>
@@ -26,7 +26,7 @@ const ExperienceList = ({ data }) => {
   console.log('ExperienceList: Rendering with experiences:', experiences);
 
   return (
-    <section id="experience" className="section-padding bg-gradient-to-b from-slate-800 to-slate-900">
+    <section id="experience" className="section-padding bg-black">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -35,10 +35,10 @@ const ExperienceList = ({ data }) => {
           viewport={{ once: true }}
           className="text-center mb-16 animate-fade-in-up"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Professional <span className="text-gradient animate-glow">Experience</span>
+          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
+            Professional <span className="text-white/50">Experience</span>
           </h2>
-          <p className="text-xl text-foreground/60 max-w-3xl mx-auto animate-slide-in-right">
+          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-right font-light leading-relaxed">
             A progression of leadership and technical roles that reflect hands-on experience in system development, organizational management, and operational responsibility.
           </p>
         </motion.div>

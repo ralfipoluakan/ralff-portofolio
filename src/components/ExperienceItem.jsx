@@ -21,28 +21,28 @@ const ExperienceItem = ({ experience, index }) => {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-2xl font-light text-white mb-2">
                 {experience.title}
               </h3>
-              <div className="flex items-center gap-2 text-foreground/60">
+              <div className="flex items-center gap-2 text-white/60">
                 <Calendar size={16} />
                 <span>{experience.duration}</span>
               </div>
             </div>
           </div>
 
-          <p className="text-foreground/80 leading-relaxed">
+          <p className="text-white/80 leading-relaxed font-light">
             {experience.description}
           </p>
 
           {experience.achievements && (
             <div className="mt-6">
-              <h4 className="text-lg font-semibold text-foreground mb-3">Key Achievements:</h4>
+              <h4 className="text-lg font-light text-white mb-3">Key Achievements:</h4>
               <ul className="space-y-2">
                 {experience.achievements.map((achievement, idx) => (
                   <motion.li
                     key={idx}
-                    className="flex items-start gap-3 text-foreground/70"
+                    className="flex items-start gap-3 text-white/70"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}

@@ -26,7 +26,7 @@ const Projects = ({ data }) => {
   };
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-b from-slate-800 to-slate-900">
+    <section id="projects" className="section-padding bg-black">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -35,10 +35,10 @@ const Projects = ({ data }) => {
           viewport={{ once: true }}
           className="text-center mb-16 animate-fade-in-up"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Featured <span className="text-gradient animate-glow">Projects</span>
+          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
+            Featured <span className="text-white/50">Projects</span>
           </h2>
-          <p className="text-xl text-foreground/60 max-w-3xl mx-auto animate-slide-in-right">
+          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-right font-light leading-relaxed">
             Real-world applications built with modern technologies, focusing on scalability, user experience, and practical solutions.
           </p>
         </motion.div>
@@ -70,10 +70,10 @@ const Projects = ({ data }) => {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-2 line-clamp-2">
+                <h3 className="text-xl font-light text-white mb-2 line-clamp-2">
                   {project.title}
                 </h3>
-                <p className="text-foreground/70 text-sm mb-4 line-clamp-2">
+                <p className="text-white/70 text-sm mb-4 line-clamp-2 font-light">
                   {project.description}
                 </p>
 
@@ -82,20 +82,20 @@ const Projects = ({ data }) => {
                   {project.techStack.slice(0, 3).map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 bg-white/10 text-xs text-foreground/80 rounded-md"
+                      className="px-2 py-1 bg-white/10 text-xs text-white/80 rounded-md"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.techStack.length > 3 && (
-                    <span className="px-2 py-1 bg-white/10 text-xs text-foreground/80 rounded-md">
+                    <span className="px-2 py-1 bg-white/10 text-xs text-white/80 rounded-md">
                       +{project.techStack.length - 3} more
                     </span>
                   )}
                 </div>
 
                 {/* Project Meta */}
-                <div className="flex items-center gap-4 text-sm text-foreground/60 flex-wrap">
+                <div className="flex items-center gap-4 text-sm text-white/60 flex-wrap">
                   <div className="flex items-center gap-1">
                     <User size={14} />
                     <span>{project.role}</span>
@@ -183,30 +183,30 @@ const Projects = ({ data }) => {
 
               {/* Modal Content */}
               <div className="p-8">
-                <h2 className="text-3xl font-bold text-foreground mb-2">
+                <h2 className="text-3xl font-light text-white mb-2">
                   {selectedProject.title}
                 </h2>
-                <p className="text-foreground/60 text-lg mb-6">
+                <p className="text-white/60 text-lg mb-6 font-light">
                   {selectedProject.subtitle}
                 </p>
 
                 {/* Project Meta */}
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <div className="flex items-center gap-2 text-foreground/80">
+                  <div className="flex items-center gap-2 text-white/80">
                     <User size={18} />
-                    <span className="font-medium">Role:</span>
+                    <span className="font-light">Role:</span>
                     <span>{selectedProject.role}</span>
                   </div>
                   {selectedProject.timeline && (
-                    <div className="flex items-center gap-2 text-foreground/80">
+                    <div className="flex items-center gap-2 text-white/80">
                       <Calendar size={18} />
-                      <span className="font-medium">Timeline:</span>
+                      <span className="font-light">Timeline:</span>
                       <span>{selectedProject.timeline}</span>
                     </div>
                   )}
-                  <div className="flex items-center gap-2 text-foreground/80">
+                  <div className="flex items-center gap-2 text-white/80">
                     <Tag size={18} />
-                    <span className="font-medium">Type:</span>
+                    <span className="font-light">Type:</span>
                     <span>{selectedProject.type}</span>
                   </div>
                   {selectedProject.githubLink && (
@@ -224,20 +224,20 @@ const Projects = ({ data }) => {
 
                 {/* Description */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Overview</h3>
-                  <p className="text-foreground/70 leading-relaxed">
+                  <h3 className="text-xl font-light text-white mb-3">Overview</h3>
+                  <p className="text-white/70 leading-relaxed font-light">
                     {selectedProject.description}
                   </p>
                 </div>
 
                 {/* Tech Stack */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Tech Stack</h3>
+                  <h3 className="text-xl font-light text-white mb-3">Tech Stack</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 text-foreground rounded-lg text-sm"
+                        className="px-3 py-1 bg-white/10 border border-white/20 text-white/80 rounded-lg text-sm"
                       >
                         {tech}
                       </span>
@@ -247,7 +247,7 @@ const Projects = ({ data }) => {
 
                 {/* Key Features */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">Key Features</h3>
+                  <h3 className="text-xl font-light text-white mb-3">Key Features</h3>
                   <ul className="space-y-2">
                     {selectedProject.keyFeatures.map((feature, idx) => (
                       <motion.li
@@ -255,7 +255,7 @@ const Projects = ({ data }) => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.05 }}
-                        className="flex items-start gap-3 text-foreground/70"
+                        className="flex items-start gap-3 text-white/70"
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                         <span>{feature}</span>

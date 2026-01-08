@@ -16,7 +16,7 @@ const Certificates = ({ data }) => {
   if (!certificates.length) {
     console.log('Certificates: No certificate data, showing fallback');
     return (
-      <section id="certificates" className="section-padding bg-gradient-to-b from-slate-900 to-slate-800">
+      <section id="certificates" className="section-padding bg-black">
         <div className="container-custom text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Professional <span className="text-gradient">Certificates</span>
@@ -32,7 +32,7 @@ const Certificates = ({ data }) => {
   console.log('Certificates: Rendering with certificates:', certificates);
 
   return (
-    <section id="certificates" className="section-padding bg-gradient-to-b from-slate-900 to-slate-800">
+    <section id="certificates" className="section-padding bg-black">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -41,10 +41,10 @@ const Certificates = ({ data }) => {
           viewport={{ once: true }}
           className="text-center mb-16 animate-fade-in-up"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Professional <span className="text-gradient animate-glow">Certificates</span>
+          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
+            Professional <span className="text-white/50">Certificates</span>
           </h2>
-          <p className="text-xl text-foreground/60 max-w-3xl mx-auto animate-slide-in-left">
+          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-left font-light leading-relaxed">
             Certifications that validate my expertise in modern web development technologies
             and professional skills.
           </p>
@@ -79,7 +79,7 @@ const Certificates = ({ data }) => {
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-foreground text-center group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-lg font-light text-white text-center group-hover:text-white/80 transition-colors duration-300">
                   {cert.title}
                 </h3>
               </div>
@@ -119,7 +119,7 @@ const Certificates = ({ data }) => {
                     alt={selectedCert.title}
                     className="w-full max-h-96 object-contain rounded-xl mb-6 mx-auto"
                   />
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-2xl font-light text-white">
                     {selectedCert.title}
                   </h3>
                 </div>

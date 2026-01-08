@@ -70,7 +70,7 @@ function App() {
 
   // 👉 RENDER SEMUA KOMPONEN (tidak blank lagi)
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-black text-white">
       <Header />
       <Hero data={data} />
       <About />

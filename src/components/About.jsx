@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-b from-slate-900 to-slate-800">
+    <section id="about" className="section-padding bg-black">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -42,10 +42,10 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16 animate-fade-in-up"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About <span className="text-gradient animate-glow">Me</span>
+          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
+            About <span className="text-white/50">Me</span>
           </h2>
-          <p className="text-xl text-foreground/60 max-w-3xl mx-auto animate-slide-in-left">
+          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-left font-light leading-relaxed">
             I am a Computer Science and Information Systems student focused on building end-to-end, real-world web systems. I develop scalable and role-based applications across healthcare, e-commerce, and organizational platforms, combining solid system architecture with practical workflows. My experience in leadership and financial management helps me design solutions that align technology with real operational needs.
           </p>
         </motion.div>
@@ -57,8 +57,8 @@ const About = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-            Core <span className="text-gradient">Focus Areas</span>
+          <h3 className="text-3xl md:text-4xl font-light text-white mb-8 text-center tracking-tight">
+            Core <span className="text-white/50">Focus Areas</span>
           </h3>
         </motion.div>
 
@@ -81,11 +81,11 @@ const About = () => {
                 <area.icon size={32} className="text-white" />
               </motion.div>
 
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-xl font-light text-white mb-3">
                 {area.title}
               </h3>
 
-              <p className="text-foreground/70 leading-relaxed text-sm">
+              <p className="text-white/70 leading-relaxed text-sm font-light">
                 {area.description}
               </p>
             </motion.div>
@@ -100,10 +100,10 @@ const About = () => {
           className="mt-16 text-center"
         >
           <div className="glass rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl font-light text-white mb-4">
               My Journey
             </h3>
-            <p className="text-foreground/70 text-lg leading-relaxed">
+            <p className="text-white/70 text-lg leading-relaxed font-light">
               My journey as a developer is shaped by building real-world, end-to-end web systems throughout my academic experience. I progressed from role-based organizational platforms to e-commerce and enterprise-level systems, including healthcare applications, supported by leadership and financial management experience that strengthened my understanding of workflows, accountability, and scalable system design.
             </p>
           </div>

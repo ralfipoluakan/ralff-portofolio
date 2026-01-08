@@ -19,7 +19,7 @@ const Footer = ({ data }) => {
   console.log('Footer: Rendering with profile data:', profile);
 
   return (
-    <footer className="bg-gradient-to-t from-slate-900 to-slate-800 border-t border-white/10">
+    <footer className="bg-black border-t border-white/5">
       <div className="container-custom py-12">
         <div className="text-center">
           <motion.div
@@ -29,10 +29,10 @@ const Footer = ({ data }) => {
             viewport={{ once: true }}
             className="mb-8 animate-fade-in-up"
           >
-            <h3 className="text-2xl font-bold text-foreground mb-4 animate-glow">
+            <h3 className="text-2xl font-light text-white mb-4">
               {profile.name || 'Ralfi Poluakan'}
             </h3>
-            <p className="text-foreground/60 max-w-md mx-auto animate-slide-in-left">
+            <p className="text-white/60 max-w-md mx-auto animate-slide-in-left font-light">
               Building scalable, real-world web systems across healthcare, e-commerce, and organizational platforms.
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ const Footer = ({ data }) => {
             viewport={{ once: true }}
             className="border-t border-white/10 pt-8"
           >
-            <p className="text-foreground/50 text-sm flex items-center justify-center gap-2">
+            <p className="text-white/50 text-sm flex items-center justify-center gap-2 font-light">
               © {currentYear} {profile.name || 'Ralfi Poluakan'}. Made with
               <motion.span
                 animate={{ scale: [1, 1.2, 1] }}

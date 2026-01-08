@@ -1,20 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Github, Linkedin } from 'lucide-react';
 
 const Hero = ({ data }) => {
   console.log('Hero received:', data);
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleViewProjects = () => {
-    scrollToSection('experience');
-  };
 
   // Fallback if no data
   const profile = data?.profile || {};
@@ -23,134 +12,117 @@ const Hero = ({ data }) => {
 
   console.log('Hero: Rendering with profile:', profile);
 
-  return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  // Split name for typography effect
+  const nameParts = profile.name?.split(' ') || ['Ralfi', 'Poluakan'];
+  const firstName = nameParts[0] || 'Ralfi';
+  const lastName = nameParts.slice(1).join(' ') || 'Poluakan';
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-10 right-20 w-32 h-32 bg-pink-500/15 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-10 left-20 w-48 h-48 bg-cyan-500/15 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
+  // Contact icons data
+  const contactIcons = [
+    { icon: Mail, href: `mailto:${contact.email || 'ralffpoluakan@gmail.com'}`, label: 'Email' },
+    { icon: Phone, href: `tel:${contact.phone?.replace(/\s/g, '') || '+6281241988202'}`, label: 'Phone' },
+    { icon: Instagram, href: social.instagram || '#', label: 'Instagram' },
+    { icon: MapPin, href: '#', label: 'Location' }
+  ].filter(item => item.href !== '#');
+
+  return (
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={profile.photo || '/profile-photo.jpg'}
+          alt={profile.name}
+          className="w-full h-full object-cover object-center"
+          style={{
+            filter: 'blur(2px)',
+            transform: 'scale(1.1)',
+            objectPosition: 'center center'
+          }}
+        />
+        {/* Dark Overlay (75% black) */}
+        <div className="absolute inset-0 bg-black/75"></div>
+        {/* Grain Effect */}
+        <div 
+          className="absolute inset-0 opacity-30 pointer-events-none"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            mixBlendMode: 'overlay'
+          }}
+        ></div>
       </div>
 
-      <div className="container-custom px-6 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Profile Image */}
+      {/* Content */}
+      <div className="container-custom px-6 md:px-12 relative z-10 w-full">
+        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
+          {/* Left Side - Vertical Contact Icons */}
           <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mb-8 animate-float"
+            className="flex flex-col gap-6 mt-8 md:mt-0"
           >
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-50 animate-glow"></div>
-              <img
-                src={profile.photo}
-                alt={profile.name}
-                className="relative w-48 h-48 rounded-full object-cover border-4 border-white/20 shadow-2xl animate-scale-in"
-              />
-            </div>
-          </motion.div>
-
-          {/* Name and Title */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6 animate-fade-in-up"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
-              Hi, I'm <span className="text-gradient animate-glow">{profile.name?.split(' ')[0]}</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground/80 font-light">
-              {profile.role}
-            </p>
-          </motion.div>
-
-          {/* Bio */}
-          <motion.p
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg text-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up"
-          >
-            {profile.bio}
-          </motion.p>
-
-          {/* Action Buttons */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleViewProjects}
-              className="btn-primary px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 animate-glow"
-            >
-              View Projects
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection('contact')}
-              className="btn-secondary px-8 py-4 text-lg font-semibold rounded-full hover:shadow-xl transition-all duration-300"
-            >
-              Contact Me
-            </motion.button>
-          </motion.div>
-
-          {/* Social Links */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex justify-center space-x-6 mb-16"
-          >
-            {[
-              { icon: Github, href: social.github || '#', label: 'GitHub' },
-              { icon: Linkedin, href: social.linkedin || '#', label: 'LinkedIn' },
-              { icon: Mail, href: `mailto:${contact.email || 'ralffpoluakan@gmail.com'}`, label: 'Email' }
-            ].map((socialLink, index) => (
+            {contactIcons.map((item, index) => (
               <motion.a
-                key={socialLink.label}
-                href={socialLink.href}
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
-                aria-label={socialLink.label}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                key={item.label}
+                href={item.href}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-12 h-12 flex items-center justify-center text-white/80 hover:text-white transition-colors duration-300"
+                aria-label={item.label}
               >
-                <socialLink.icon size={24} />
+                <item.icon size={24} />
               </motion.a>
             ))}
           </motion.div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
+          {/* Main Content - Left Aligned */}
+          <div className="flex-1 max-w-4xl">
+            {/* Status Indicator */}
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="cursor-pointer"
-              onClick={() => scrollToSection('about')}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex items-center gap-2 mb-8"
             >
-              <ChevronDown size={32} className="text-white/60 hover:text-white transition-colors" />
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <span className="text-white/80 text-sm font-light tracking-wider uppercase">OPEN TO WORK</span>
             </motion.div>
-          </motion.div>
+
+            {/* Role/Title */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl text-white/70 font-light mb-6 tracking-wide"
+            >
+              {profile.role || 'Full Stack Developer & Information Systems Student'}
+            </motion.h2>
+
+            {/* Name Typography */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-8 leading-tight"
+            >
+              <span className="text-white">{firstName}</span>
+              <br />
+              <span className="text-white/40">{lastName}</span>
+            </motion.h1>
+
+            {/* Bio */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-base sm:text-lg md:text-xl text-white/80 font-light max-w-2xl leading-relaxed mb-8 md:mb-12"
+            >
+              {profile.bio}
+            </motion.p>
+          </div>
         </div>
       </div>
     </section>
