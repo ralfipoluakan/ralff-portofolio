@@ -52,13 +52,13 @@ const Header = () => {
       }`}
       style={{ transform: 'translateX(-50%)' }}
     >
-      <div className="glass rounded-full px-4 md:px-6 py-2.5 md:py-3 backdrop-blur-xl border border-white/20 bg-black/40 shadow-lg">
-        <div className="flex items-center justify-center gap-1 md:gap-2 lg:gap-3">
+      <div className="glass rounded-full px-2 sm:px-3 md:px-6 py-1.5 sm:py-2 md:py-3 backdrop-blur-xl border border-white/20 bg-black/40 shadow-lg w-[calc(100vw-1rem)] sm:w-auto">
+        <div className="flex items-center justify-between sm:justify-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3">
           {navItems.map((item, index) => (
             <motion.button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`relative px-3 md:px-4 lg:px-6 py-2 md:py-2 text-sm md:text-sm lg:text-base font-light transition-colors duration-300 whitespace-nowrap ${
+              className={`relative px-2 sm:px-3 md:px-4 lg:px-6 py-1 sm:py-1.5 md:py-2 text-[10px] sm:text-xs md:text-sm lg:text-base font-light transition-colors duration-300 whitespace-nowrap flex-1 sm:flex-initial text-center ${
                 activeSection === item.id
                   ? 'text-white'
                   : 'text-white/70 hover:text-white'
