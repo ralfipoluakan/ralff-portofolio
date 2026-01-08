@@ -45,20 +45,23 @@ const Header = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 1 }}
-      className={`fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
-        isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      className={`fixed bottom-4 md:bottom-8 left-1/2 z-[100] transition-all duration-300 ${
+        isScrolled 
+          ? 'opacity-100' 
+          : 'opacity-100 md:opacity-0 md:pointer-events-none pointer-events-auto'
       }`}
+      style={{ transform: 'translateX(-50%)' }}
     >
-      <div className="glass rounded-full px-3 md:px-6 py-2 md:py-3 backdrop-blur-xl border border-white/10">
-        <div className="flex items-center gap-0.5 md:gap-2">
+      <div className="glass rounded-full px-4 md:px-6 py-2.5 md:py-3 backdrop-blur-xl border border-white/20 bg-black/40 shadow-lg">
+        <div className="flex items-center justify-center gap-1 md:gap-2 lg:gap-3">
           {navItems.map((item, index) => (
             <motion.button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`relative px-2 md:px-4 lg:px-6 py-1.5 md:py-2 text-xs md:text-sm lg:text-base font-light transition-colors duration-300 ${
+              className={`relative px-3 md:px-4 lg:px-6 py-2 md:py-2 text-sm md:text-sm lg:text-base font-light transition-colors duration-300 whitespace-nowrap ${
                 activeSection === item.id
                   ? 'text-white'
-                  : 'text-white/60 hover:text-white/80'
+                  : 'text-white/70 hover:text-white'
               }`}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
