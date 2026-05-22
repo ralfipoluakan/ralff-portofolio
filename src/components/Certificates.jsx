@@ -1,57 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Eye } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 const Certificates = ({ data }) => {
-  console.log('Certificates received:', data);
   const [selectedCert, setSelectedCert] = useState(null);
-
-  // Fallback if no data
   const certificates = data?.certificates || [];
-  const displayCertificates = certificates.map((cert, index) => ({
-    ...cert,
-    title: cert.title // Use the title from db.json directly
-  }));
 
-  if (!certificates.length) {
-    console.log('Certificates: No certificate data, showing fallback');
-    return (
-      <section id="certificates" className="section-padding bg-black">
-        <div className="container-custom text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Professional <span className="text-gradient">Certificates</span>
-          </h2>
-          <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
-            Certifications that validate my expertise in modern web development technologies
-          </p>
-        </div>
-      </section>
-    );
-  }
-
-  console.log('Certificates: Rendering with certificates:', certificates);
+  if (!certificates.length) return null;
 
   return (
-    <section id="certificates" className="section-padding bg-black">
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16 animate-fade-in-up"
-        >
-          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
-            Professional <span className="text-white/50">Certificates</span>
-          </h2>
-          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-left font-light leading-relaxed">
-            Certifications that validate my expertise in modern web development technologies
-            and professional skills.
-          </p>
-        </motion.div>
+    <section id="certificates" className="relative">
+      <SectionHeading
+        title="Professional"
+        highlight="Certificates"
+        subtitle="Certifications validating leadership, workshops, and international competition involvement."
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {displayCertificates.map((cert, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+          {certificates.map((cert, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -86,7 +53,6 @@ const Certificates = ({ data }) => {
             </motion.div>
           ))}
         </div>
-      </div>
 
       {/* Modal */}
       <AnimatePresence>

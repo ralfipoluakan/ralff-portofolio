@@ -3,24 +3,39 @@ import { motion } from "framer-motion";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import ExperienceList from "./components/ExperienceList";
+import ImpactMetrics from "./components/ImpactMetrics";
+import FeaturedProject from "./components/FeaturedProject";
 import Projects from "./components/Projects";
+import TechStack from "./components/TechStack";
+import Leadership from "./components/Leadership";
+import ExperienceList from "./components/ExperienceList";
+import Achievements from "./components/Achievements";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import dbData from "../db.json";
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 36 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 1,
-      ease: [0.22, 1, 0.36, 1],
-    },
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
   },
 };
+
+const Section = ({ children, className = "" }) => (
+  <motion.div
+    variants={sectionVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.12 }}
+    className={`relative ${className}`}
+    style={{ scrollMarginTop: "96px" }}
+  >
+    <div className="max-w-6xl mx-auto px-6 md:px-12 py-14 md:py-20">{children}</div>
+  </motion.div>
+);
 
 function App() {
   const [data, setData] = useState(null);
@@ -29,60 +44,40 @@ function App() {
 
   useEffect(() => {
     try {
-      const allData = {
+      setData({
         profile: dbData.profile,
+        impactMetrics: dbData.impactMetrics,
+        leadership: dbData.leadership,
         experience: dbData.experience,
+        achievements: dbData.achievements,
+        skills: dbData.skills,
         projects: dbData.projects || [],
         certificates: dbData.certificates,
         contact: dbData.contact,
-        social: dbData.social
-      };
-      console.log("ALL DATA LOADED:", allData);
-      setData(allData);
+        social: dbData.social,
+      });
       setLoading(false);
     } catch (err) {
-      console.error("DATA LOAD ERROR:", err);
       setError(err);
       setLoading(false);
     }
-
-    const style = document.createElement("style");
-    style.textContent = `
-      #hero, #about, #projects, #experience, #certificates, #contact {
-        background: transparent !important;
-      }
-      #hero > div:first-child,
-      #about section, #projects section, #experience section, #certificates section, #contact section {
-        background: transparent !important;
-      }
-      #about.section-padding, #projects.section-padding, #experience.section-padding, 
-      #certificates.section-padding, #contact.section-padding {
-        padding: 0 !important;
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      if (document.head.contains(style)) {
-        document.head.removeChild(style);
-      }
-    };
   }, []);
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-black">
-        <p className="text-white text-xl font-light">Please wait...</p>
+      <div className="h-screen flex items-center justify-center bg-[#0a0a0f]">
+        <p className="text-white/70 text-lg font-light tracking-wide">Loading portfolio…</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="h-screen flex flex-col gap-4 items-center justify-center bg-black">
-        <p className="text-white text-xl font-light">Failed to load data</p>
+      <div className="h-screen flex flex-col gap-4 items-center justify-center bg-[#0a0a0f]">
+        <p className="text-white/80">Failed to load portfolio data.</p>
         <button
-          className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded transition-colors"
+          type="button"
+          className="px-5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm"
           onClick={() => window.location.reload()}
         >
           Retry
@@ -91,107 +86,71 @@ function App() {
     );
   }
 
-  if (!data) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-black text-white">
-        No data received.
-      </div>
-    );
-  }
-
   const profilePhoto = data?.profile?.photo || "/profile-photo.jpg";
 
   return (
-    <div className="relative min-h-screen text-white overflow-x-hidden">
-      <div className="fixed inset-0 z-0">
+    <div className="relative min-h-screen text-white overflow-x-hidden bg-[#0a0a0f]">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <img
           src={profilePhoto}
-          alt="Background"
-          className="w-full h-full object-cover"
-          style={{
-            filter: "blur(1px)",
-            transform: "scale(1.05)",
-          }}
+          alt=""
+          aria-hidden
+          className="w-full h-full object-cover opacity-30"
+          style={{ filter: "blur(8px)", transform: "scale(1.08)" }}
         />
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-[#0a0a0f]/92" />
         <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
+          className="absolute inset-0 opacity-[0.15]"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-            mixBlendMode: "overlay",
+            background:
+              "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99,102,241,0.25), transparent), radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139,92,246,0.12), transparent)",
           }}
         />
       </div>
 
       <div className="relative z-10">
         <Header />
-
         <Hero data={data} />
 
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative"
-          style={{ scrollMarginTop: "100px" }}
-        >
-          <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-16">
-            <About />
-          </div>
-        </motion.div>
+        <Section>
+          <About data={data} />
+        </Section>
 
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative"
-          style={{ scrollMarginTop: "100px" }}
-        >
-          <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-16">
-            <Projects data={data} />
-          </div>
-        </motion.div>
+        <Section>
+          <ImpactMetrics data={data} />
+        </Section>
 
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative"
-          style={{ scrollMarginTop: "100px" }}
-        >
-          <div className="max-w-4xl mx-auto px-6 md:px-12 py-10 md:py-12">
-            <ExperienceList data={data} />
-          </div>
-        </motion.div>
+        <Section>
+          <FeaturedProject data={data} />
+        </Section>
 
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative"
-          style={{ scrollMarginTop: "100px" }}
-        >
-          <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-16">
-            <Certificates data={data} />
-          </div>
-        </motion.div>
+        <Section className="!pb-8">
+          <Projects data={data} />
+        </Section>
 
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative"
-          style={{ scrollMarginTop: "100px" }}
-        >
-          <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-16">
-            <Contact data={data} />
-          </div>
-        </motion.div>
+        <Section>
+          <TechStack data={data} />
+        </Section>
+
+        <Section>
+          <Leadership data={data} />
+        </Section>
+
+        <Section>
+          <ExperienceList data={data} />
+        </Section>
+
+        <Section>
+          <Achievements data={data} />
+        </Section>
+
+        <Section>
+          <Certificates data={data} />
+        </Section>
+
+        <Section>
+          <Contact data={data} />
+        </Section>
 
         <Footer data={data} />
       </div>

@@ -1,11 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import SectionHeading from './SectionHeading';
 
 const Contact = ({ data }) => {
-  console.log('Contact received:', data);
-
-  // Fallback if no data
   const contact = data?.contact || {};
   const social = data?.social || {};
 
@@ -13,111 +10,115 @@ const Contact = ({ data }) => {
     {
       icon: Mail,
       label: 'Email',
-      value: contact.email || 'ralffpoluakan@gmail.com',
-      href: `mailto:${contact.email || 'ralffpoluakan@gmail.com'}`
+      value: contact.email,
+      href: `mailto:${contact.email}`,
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: contact.phone || '+62 812 4198 8202',
-      href: `tel:${contact.phone || '+6281241988202'}`
+      value: contact.phone,
+      href: `tel:${contact.phone?.replace(/\s/g, '')}`,
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: contact.location || 'Manado, North Sulawesi, Indonesia',
-      href: '#'
-    }
+      value: contact.location,
+      href: null,
+    },
   ];
 
   const socialLinks = [
-    { icon: Github, href: social.github || '#', label: 'GitHub' },
-    { icon: Linkedin, href: social.linkedin || '#', label: 'LinkedIn' },
-    { icon: Instagram, href: social.instagram || '#', label: 'Instagram' }
-  ];
-
-  console.log('Contact: Rendering with contact data:', contact);
+    { icon: Github, href: social.github, label: 'GitHub' },
+    { icon: Linkedin, href: social.linkedin, label: 'LinkedIn' },
+  ].filter((s) => s.href);
 
   return (
-    <section id="contact" className="section-padding bg-black">
-      <div className="container-custom">
+    <section id="contact" className="relative">
+      <SectionHeading
+        title="Get In"
+        highlight="Touch"
+        subtitle="Open to international internships, remote opportunities, and technology-business roles. Let's connect."
+      />
+
+      <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16 animate-fade-in-up"
+          className="glass rounded-3xl p-8 md:p-10 border border-white/10"
         >
-          <h2 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-tight">
-            Get In <span className="text-white/50">Touch</span>
-          </h2>
-          <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto animate-slide-in-right font-light leading-relaxed">
-            Ready to collaborate? Let's discuss how we can work together to bring your ideas to life.
-          </p>
-        </motion.div>
-
-        <div className="max-w-2xl mx-auto">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="text-2xl font-light text-white mb-6">Let's Connect</h3>
-              <p className="text-white/70 mb-8 font-light">
-                I'm always interested in new opportunities and exciting projects.
-                Whether you have a question or just want to say hi, feel free to reach out!
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <motion.a
-                  key={info.label}
-                  href={info.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-4 p-4 glass rounded-2xl hover:scale-105 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/10">
-                    <info.icon size={24} className="text-white" />
+          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            {contactInfo.map((info, index) => {
+              const content = (
+                <>
+                  <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center border border-white/10 shrink-0">
+                    <info.icon size={20} className="text-white/90" />
                   </div>
-                  <div>
-                    <p className="text-sm text-white/60">{info.label}</p>
-                    <p className="text-white font-light">{info.value}</p>
+                  <div className="min-w-0">
+                    <p className="text-xs text-white/45 uppercase tracking-wider mb-0.5">{info.label}</p>
+                    <p className="text-white font-light text-sm md:text-base truncate">{info.value}</p>
                   </div>
-                </motion.a>
-              ))}
-            </div>
+                </>
+              );
 
-            <div>
-              <h4 className="text-lg font-light text-white mb-4">Follow Me</h4>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
+              const className =
+                'flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/8 hover:bg-white/8 hover:border-white/15 transition-all';
+
+              if (info.href) {
+                return (
                   <motion.a
-                    key={social.label}
-                    href={social.href}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key={info.label}
+                    href={info.href}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.08 }}
                     viewport={{ once: true }}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
-                    aria-label={social.label}
+                    className={className}
                   >
-                    <social.icon size={24} />
+                    {content}
                   </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+                );
+              }
 
-        </div>
+              return (
+                <motion.div
+                  key={info.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                  className={className}
+                >
+                  {content}
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <div className="flex flex-wrap gap-3 justify-center pt-6 border-t border-white/10">
+            {socialLinks.map((link) => (
+              <motion.a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -2 }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors"
+              >
+                <link.icon size={18} />
+                {link.label}
+              </motion.a>
+            ))}
+            <motion.a
+              href={`mailto:${contact.email}?subject=Portfolio%20Inquiry`}
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-sm font-medium hover:bg-white/15 transition-colors"
+            >
+              <Mail size={18} />
+              Send Email
+            </motion.a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

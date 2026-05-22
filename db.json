@@ -1,135 +1,254 @@
 {
   "profile": {
-    "name": "Ralfi Poluakan",
-    "role": "Full Stack Developer & Information Systems Student",
-    "bio": "Building scalable web applications and enterprise systems with real world impact, Designing and building end-to-end web systems with real-world impact spanning healthcare management, e-commerce platforms, and organizational platforms.",
-    "photo": "/profile-photo.jpg"
+    "name": "Marcelo Ralfi Poluakan",
+    "shortName": "Ralfi Poluakan",
+    "role": "Information Systems Student · Full-Stack Developer · Technology & Business Enthusiast",
+    "headline": "Building technology-driven solutions through software development, leadership, and business-oriented problem solving.",
+    "bio": "Faculty of Computer Science student majoring in Information Systems with experience in leadership, project management, full-stack development, and organizational management. Passionate about creating impactful solutions through collaboration, adaptability, and strong analytical thinking.",
+    "photo": "/profile-photo.jpg",
+    "resumeUrl": "/CV_Marcelo_Ralfi_Poluakan.pdf",
+    "tags": ["Full-Stack Development", "Project Management", "Leadership", "Business Analysis", "UI/UX Thinking"]
   },
-  "experience": [
+  "impactMetrics": [
+    { "value": "3.83", "label": "GPA", "suffix": "/4.00" },
+    { "value": "119", "label": "Credits Completed", "suffix": "" },
+    { "value": "1st", "label": "PROXOCORIS Business Case", "suffix": "Place" },
+    { "value": "4+", "label": "Leadership Roles", "suffix": "Active" },
+    { "value": "5", "label": "Full-Stack Projects", "suffix": "Built" },
+    { "value": "60M+", "label": "Event Budget Managed", "suffix": "IDR" }
+  ],
+  "leadership": [
     {
       "id": 1,
-      "title": "Full-Stack Developer (Academic & Personal Projects)",
-      "company": "",
-      "duration": "2024 – Present",
-      "description": "Designed and developed full-stack web applications as part of academic and independent projects. Built real-world systems including organizational information platforms, e-commerce applications with payment gateway and AI integration, and healthcare management information systems.",
-      "achievements": [
-        "Developed role-based and workflow-driven web systems",
-        "Implemented RESTful APIs, dashboards, and real-time features",
-        "Applied clean architecture, state management, and responsive design principles"
+      "title": "Co-Founder & Treasurer",
+      "organization": "UNKLAB Virtue in Computer Science (UVICS)",
+      "duration": "April 2024 – May 2026",
+      "description": "Co-founded a technology and academic-focused student organization. Managed budgeting, cash flow, and financial reporting while coordinating cross-division programs, workshops, mentoring sessions, and member development initiatives with faculty and external partners.",
+      "highlights": [
+        "Co-founded UVICS to empower students in technology and competition development",
+        "Managed organizational budgeting and collaboration with university finance offices",
+        "Designed programs integrating leadership, public speaking, and project management"
       ]
     },
     {
       "id": 2,
-      "title": "Treasurer at UVICS (UNKLAB Virtue in Computer Science)",
-      "company": "",
-      "duration": "August 2023 – January 2026",
-      "description": "Managed financial planning and budgeting for academic and organizational activities. Oversaw fund allocation, expense tracking, and transparent financial reporting. Supported workshops, mentoring sessions, and internal academic programs through effective financial coordination.",
-      "achievements": [
-        "Managed organizational budgeting and cash flow",
-        "Maintained accountable and transparent financial reports",
-        "Supported multiple technology-focused events and programs"
+      "title": "Chairman — PROXOCORIS International Competition 2026",
+      "organization": "Universitas Klabat × CORIS",
+      "duration": "October 2025 – May 2026",
+      "description": "Led overall planning, coordination, and execution of an international technology competition involving multiple divisions and external partners. Oversaw strategic planning, stakeholder collaboration, and large-scale event operations.",
+      "highlights": [
+        "Led cross-functional committees and timeline management for international competition",
+        "Coordinated with advisors, faculty, sponsors, and external stakeholders",
+        "Managed competition programs, meetings, and large-scale event activities"
       ]
     },
     {
       "id": 3,
-      "title": "Treasurer at PROXOCORIS International Competition 2025",
-      "company": "",
-      "duration": "December 2024 – April 2025",
-      "description": "Managed event finances from initial planning to execution, handling a total budget exceeding IDR 60 million. Coordinated fundraising and sponsorship acquisition with external partners.",
-      "achievements": [
-        "Successfully managed large-scale event finances end-to-end",
-        "Secured sponsorships from industry partners such as Dicoding and AD Produksi",
-        "Ensured smooth financial operations throughout the event lifecycle"
+      "title": "Parliamentary Coordinator — Student Council",
+      "organization": "Faculty of Computer Science, Universitas Klabat",
+      "duration": "January 2026 – November 2026",
+      "description": "Coordinated weekly faculty academic programs and public lecture sessions. Collaborated with the Dean, study program heads, and faculty lecturers to manage academic activities and faculty-wide events.",
+      "highlights": [
+        "Coordinated Thursday academic programs and public lecture sessions",
+        "Collaborated with Dean and faculty management on program execution",
+        "Supported communication between student representatives and faculty leadership"
       ]
     },
     {
       "id": 4,
-      "title": "Treasurer at UVICS Workshop × SMP UALS",
-      "company": "",
-      "duration": "July 2025",
-      "description": "Managed financial operations for an educational workshop themed \"Fundamentals of Computational Thinking and Programming with Scratch\". Ensured budget sufficiency, expense distribution, and financial transparency.",
+      "title": "Multimedia Division Coordinator",
+      "organization": "Pioneer Chapel, Universitas Klabat",
+      "duration": "August 2025 – January 2026",
+      "description": "Led the Multimedia Division for campus chapel programs. Managed visual media, documentation, digital content production, and team coordination for weekly services and events.",
+      "highlights": [
+        "Led multimedia teams for weekly chapel services and events",
+        "Managed digital content production and event documentation",
+        "Oversaw task delegation and workflow coordination for multimedia operations"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "title": "Full-Stack Developer",
+      "company": "Academic & Independent Projects",
+      "duration": "2024 – Present",
+      "description": "Designed and developed full-stack web and mobile applications including organizational portals, e-commerce with payment gateways, healthcare management systems, AI-powered platforms, and ISO security audit dashboards.",
       "achievements": [
-        "Planned and managed workshop budget",
-        "Maintained clear financial records",
-        "Supported successful execution of a technology education program"
+        "Built role-based, workflow-driven systems across healthcare, e-commerce, and org platforms",
+        "Integrated AI chatbots, payment gateways, real-time features, and data visualization",
+        "Applied agile project management, system analysis, and clean architecture principles"
       ]
     },
     {
-      "id": 5,
-      "title": "Mentor at UVICS (Competition Handler Division)",
-      "company": "",
-      "duration": "June 2025",
-      "description": "Served as a mentor in a session titled \"Effective Communication & Professional Written Communication\". Provided guidance on professional communication and written strategy for competitive environments.",
+      "id": 2,
+      "title": "Project Manager & System Analyst",
+      "company": "IT Project Management Course",
+      "duration": "January 2026 – May 2026",
+      "description": "Applied Scrumban methodology across a 3-month timeline. Served as rotating Project Manager leading a 6-member team through sprint planning, PRD development, and product delivery.",
       "achievements": [
-        "Delivered mentoring on communication and problem-solving",
-        "Supported member development in academic competition contexts"
+        "Led 2-week sprint as Project Manager for a team of 6 members",
+        "Developed PRDs with SMART acceptance criteria and user workflow analysis",
+        "Coordinated sprint reviews, retrospectives, and task management workflows"
       ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "1st Place Winner — Business Case Competition",
+      "event": "PROXOCORIS International Competition 2026",
+      "period": "March 2026 – April 2026",
+      "description": "Developed CircularLink, an AI and blockchain-integrated digital marketplace for sustainable waste management. Conducted PESTEL analysis, market analysis, and financial feasibility modeling.",
+      "badge": "gold"
+    },
+    {
+      "id": 2,
+      "title": "Top 10 Finalist — Business Case Competition",
+      "event": "Ambitions Competition 2025",
+      "period": "November 2025 – December 2025",
+      "description": "Developed DIGIMICRO, a digital microfinance transformation strategy integrating AI, blockchain, and digital lending concepts with PESTLE, SWOT, and Gap Analysis frameworks.",
+      "badge": "silver"
+    },
+    {
+      "id": 3,
+      "title": "Hackathon Participant",
+      "event": "Infinite Hackathon by OJK",
+      "period": "October 2025",
+      "description": "Developed LokaGames, a Web3-based game marketplace supporting Indonesian game developers with hybrid payment systems, NFT ownership, and blockchain integration using React, Next.js, and Solidity.",
+      "badge": "bronze"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend Development",
+      "items": ["React 19", "Vite", "TailwindCSS", "React Router", "Zustand", "Responsive UI"]
+    },
+    {
+      "category": "Backend Development",
+      "items": ["Node.js", "Express.js", "FastAPI", "REST APIs", "SQLAlchemy", "Convex"]
+    },
+    {
+      "category": "Database & Infrastructure",
+      "items": ["SQLite", "MongoDB", "VPS Deployment", "Nginx", "Cloud Storage"]
+    },
+    {
+      "category": "Mobile Development",
+      "items": ["React Native", "Expo", "Mobile-First UI", "QR Integration"]
+    },
+    {
+      "category": "UI/UX & Design",
+      "items": ["Design Thinking", "Heuristic Evaluation", "Prototyping", "SUS Testing", "Maze"]
+    },
+    {
+      "category": "Project Management",
+      "items": ["Scrumban", "Sprint Planning", "PRD Writing", "Agile Delivery", "SMART Criteria"]
+    },
+    {
+      "category": "Leadership & Communication",
+      "items": ["Team Coordination", "Stakeholder Management", "Public Speaking", "Mentoring", "MC"]
+    },
+    {
+      "category": "Business & System Analysis",
+      "items": ["PESTEL/SWOT", "ISO/IEC 27001", "Risk Assessment", "Gap Analysis", "RCA"]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "UKHUB – Portal Informasi Organisasi Kemahasiswaan",
-      "subtitle": "Portal Informasi Organisasi Kemahasiswaan",
-      "role": "Frontend Developer",
-      "type": "Full-Stack Web Application",
-      "githubLink": "https://github.com/ralfipoluakan/Portal-Informasi-Organisasi-Kemahasiswaan",
-      "image": "/projects/ukhub.jpg",
-      "description": "Portal web terintegrasi untuk manajemen informasi organisasi kemahasiswaan dengan sistem multi-role access. Platform ini memungkinkan Admin, Dosen Pembina, dan Mahasiswa mengelola serta mengakses data organisasi, ruangan, kegiatan, dan pengumuman secara terpusat dan real-time.",
-      "techStack": ["React 19", "Vite", "TailwindCSS", "React Router DOM", "Context API"],
+      "title": "ZeroBite",
+      "subtitle": "AI-Powered Food Redistribution Platform",
+      "role": "Full-Stack Mobile App Developer",
+      "type": "Mobile Application",
+      "timeline": "March 2026 – May 2026",
+      "featured": true,
+      "githubLink": "https://github.com/ralfipoluakan/ZeroWaste-Application",
+      "image": "/projects/zerobite.jpg",
+      "gradient": "from-emerald-600/40 to-teal-900/60",
+      "description": "AI-powered food redistribution platform reducing food waste through location-based discovery, QR-based claims, and personalized AI recommendations for surplus food distribution.",
+      "techStack": ["React Native", "Expo", "Convex", "AI Chatbot", "Cloud Storage"],
       "keyFeatures": [
-        "Multi-role authentication system (Admin, Dosen, Mahasiswa)",
-        "3 dashboard berbeda sesuai role pengguna",
-        "CRUD operations untuk organisasi, ruangan, kegiatan, dan pengumuman",
-        "Dark/light mode dengan localStorage persistence",
-        "Mobile-first responsive design",
-        "Global search dengan filter dan tipe pencarian"
+        "AI chatbot integration for real-time food suggestions",
+        "QR claim verification and transaction history",
+        "Location-based food discovery and provider tracking",
+        "Mobile-first UI with personalized recommendations"
       ]
     },
     {
       "id": 2,
-      "title": "BraveVerse Beauty – Platform E-Commerce Skincare dengan Payment Gateway & AI Integration",
-      "subtitle": "Platform E-Commerce Skincare dengan Payment Gateway & AI Integration",
-      "role": "Full-Stack Developer",
-      "type": "Full-Stack Web Application",
-      "timeline": "Oktober 2026 – November 2026",
-      "liveDemo": "https://braveverse.my.id",
-      "githubLink": "https://github.com/ralfipoluakan/E-commerce-Platform",
-      "image": "/projects/braveverse.jpg",
-      "description": "Platform e-commerce skincare yang berfokus pada brand Korea seperti SKIN1004, LANEIGE, COSRX, Beauty of Joseon, dan ROUND LAB. Platform ini mendukung multiple payment methods melalui Midtrans serta AI-powered customer support menggunakan Google Gemini.",
-      "techStack": ["Node.js", "Express.js", "Vanilla JavaScript", "Midtrans API", "Google Gemini API", "Nginx", "VPS"],
+      "title": "ISO/IEC 27001 Audit Dashboard",
+      "subtitle": "Information System Security Audit — Kopi Kenangan POS",
+      "role": "System Analyst & IT Auditor",
+      "type": "Security Audit & Dashboard",
+      "timeline": "January 2026 – May 2026",
+      "githubLink": "https://github.com/ralfipoluakan/dashboard-information-system-audit-using-ISO-IEC-27001-2022-standards",
+      "image": "/projects/audit-dashboard.jpg",
+      "gradient": "from-indigo-600/40 to-slate-900/60",
+      "description": "Interactive dashboard and audit analysis system based on ISO/IEC 27001:2022 standards for evaluating operational risks, security gaps, and POS system vulnerabilities.",
+      "techStack": ["React", "Dashboard UI", "Risk Analysis", "ISO/IEC 27001", "Data Visualization"],
       "keyFeatures": [
-        "Payment gateway integration (Midtrans) dengan berbagai metode pembayaran",
-        "Shopping cart dengan real-time quantity management",
-        "AI-powered customer support menggunakan Google Gemini",
-        "Product catalog multi-brand dengan filtering",
-        "Checkout flow dengan customer data input",
-        "Fully deployed & production-ready application"
+        "Risk analysis dashboard with gap evaluation",
+        "ISO/IEC 27001 framework implementation",
+        "Operational audit visualization and RCA",
+        "Interactive reporting for security recommendations"
       ]
     },
     {
       "id": 3,
-      "title": "Klinik Sentosa – Sistem Manajemen Operasional Klinik Berbasis Web",
-      "subtitle": "Sistem Manajemen Operasional Klinik Berbasis Web",
+      "title": "UKHUB",
+      "subtitle": "Student Organization Information Portal",
+      "role": "Frontend Developer",
+      "type": "Full-Stack Web Application",
+      "timeline": "October 2025 – November 2025",
+      "githubLink": "https://github.com/ralfipoluakan/Portal-Informasi-Organisasi-Kemahasiswaan",
+      "image": "/projects/ukhub.jpg",
+      "gradient": "from-blue-600/40 to-indigo-900/60",
+      "description": "Integrated web platform for managing student organization information, activities, rooms, and announcements with multi-role access for Admin, Lecturer Advisors, and Students.",
+      "techStack": ["React 19", "Vite", "TailwindCSS", "React Router DOM", "Context API"],
+      "keyFeatures": [
+        "Multi-role authentication (Admin, Lecturer, Student)",
+        "CRUD for organizations, rooms, activities, and announcements",
+        "Dark/light mode with global search and filters",
+        "Mobile-first responsive design with localStorage persistence"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "BraveVerse Beauty",
+      "subtitle": "AI-Powered Skincare E-Commerce Platform",
       "role": "Full-Stack Developer",
       "type": "Full-Stack Web Application",
-      "timeline": "Oktober – November 2026",
-      "githubLink": "https://github.com/ralfipoluakan/Sistem-Informasi-Manajemen-Klinik-Berbasis-Web/tree/main/Desktop/SEMESTER%205/Sistem%20Manajemen%20Operasional%20Klinik%20Berbasis%20Web",
-      "images": [
-        "/projects/klinik-latest.jpg"
-      ],
-      "image": "/projects/klinik-latest.jpg",
-      "description": "Sistem informasi manajemen klinik komprehensif yang dirancang untuk mengotomatisasi seluruh operasional klinik kesehatan. Sistem ini mendukung multi-role access dengan fitur utama seperti manajemen antrian real-time, rekam medis digital, sistem resep & inventori obat, pembayaran terintegrasi, serta dashboard analitik eksekutif.",
-      "techStack": ["FastAPI", "SQLAlchemy", "SQLite", "React 19", "Vite", "TailwindCSS", "Zustand", "Recharts"],
+      "timeline": "October 2025 – November 2025",
+      "liveDemo": "https://braveverse.my.id",
+      "githubLink": "https://github.com/ralfipoluakan/E-commerce-Platform",
+      "image": "/projects/braveverse.jpg",
+      "gradient": "from-pink-600/40 to-purple-900/60",
+      "description": "Korean skincare e-commerce platform with Midtrans payment gateway integration and Google Gemini AI-powered customer support, shopping cart, and production VPS deployment.",
+      "techStack": ["Node.js", "Express.js", "Midtrans API", "Google Gemini API", "Nginx", "VPS"],
       "keyFeatures": [
-        "Multi-role authentication & authorization (Admin, Dokter, Apoteker, Kepala Klinik)",
-        "Real-time queue management dengan workflow tracking",
-        "Digital medical records dengan anamnesa dan diagnosa",
-        "Prescription & pharmacy system terintegrasi dengan stok",
-        "Payment & billing system dengan perhitungan otomatis",
-        "Reporting & analytics dashboard dengan data visualization",
-        "Schedule management untuk dokter",
-        "Executive dashboard untuk pengambilan keputusan strategis"
+        "Payment gateway with multiple digital payment methods",
+        "AI-powered customer support using Google Gemini",
+        "Real-time shopping cart and checkout workflows",
+        "Production-ready VPS deployment with Nginx"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Klinik Sentosa",
+      "subtitle": "Web-Based Clinic Management System",
+      "role": "Full-Stack Developer",
+      "type": "Full-Stack Web Application",
+      "timeline": "October 2025 – November 2025",
+      "githubLink": "https://github.com/ralfipoluakan/Sistem-Informasi-Manajemen-Klinik-Berbasis-Web/tree/main/Desktop/SEMESTER%205/Sistem%20Manajemen%20Operasional%20Klinik%20Berbasis%20Web",
+      "image": "/projects/klinik-latest.jpg",
+      "gradient": "from-cyan-600/40 to-blue-900/60",
+      "description": "Comprehensive clinic management system automating healthcare workflows with multi-role access, real-time queue management, digital medical records, and executive analytics dashboards.",
+      "techStack": ["FastAPI", "SQLAlchemy", "SQLite", "React 19", "Zustand", "Recharts"],
+      "keyFeatures": [
+        "Multi-role authentication (Admin, Doctor, Pharmacist, Management)",
+        "Real-time queue management and digital medical records",
+        "Integrated prescription, pharmacy inventory, and billing systems",
+        "Executive analytics dashboard with data visualization"
       ]
     }
   ],
@@ -145,8 +264,8 @@
     "location": "Manado, North Sulawesi, Indonesia"
   },
   "social": {
-    "instagram": "https://www.instagram.com/ralmarcel_",
     "github": "https://github.com/ralfipoluakan",
-    "linkedin": "https://www.linkedin.com/in/marcelo-ralfi-poluakan-0313a4389"
+    "linkedin": "https://www.linkedin.com/in/marcelo-ralfi-poluakan-0313a4389",
+    "instagram": "https://www.instagram.com/ralmarcel_"
   }
 }

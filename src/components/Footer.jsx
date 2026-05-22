@@ -1,88 +1,46 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from 'react-icons/fa';
+import { Github, Linkedin } from 'lucide-react';
 
 const Footer = ({ data }) => {
-  console.log('Footer received:', data);
-  const currentYear = new Date().getFullYear();
-
-  // Fallback if no data
   const profile = data?.profile || {};
   const social = data?.social || {};
-
-  const socialLinks = [
-    { icon: FaInstagram, href: social.instagram || '#', label: 'Instagram' },
-    { icon: FaGithub, href: social.github || '#', label: 'GitHub' },
-    { icon: FaLinkedin, href: social.linkedin || '#', label: 'LinkedIn' }
-  ];
-
-  console.log('Footer: Rendering with profile data:', profile);
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-black border-t border-white/5">
-      <div className="container-custom py-12">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-8 animate-fade-in-up"
-          >
-            <h3 className="text-2xl font-light text-white mb-4">
-              {profile.name || 'Ralfi Poluakan'}
-            </h3>
-            <p className="text-white/60 max-w-md mx-auto animate-slide-in-left font-light">
-              Building scalable, real-world web systems across healthcare, e-commerce, and organizational platforms.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex justify-center gap-6 mb-8"
-          >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
-                aria-label={social.label}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-              >
-                <social.icon size={20} />
-              </motion.a>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="border-t border-white/10 pt-8"
-          >
-            <p className="text-white/50 text-sm flex items-center justify-center gap-2 font-light">
-              © {currentYear} {profile.name || 'Ralfi Poluakan'}. Made with
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="text-red-500"
-              >
-                <FaHeart size={16} color="currentColor" />
-              </motion.span>
-              using React & Tailwind CSS
-            </p>
-          </motion.div>
+    <footer className="relative border-t border-white/10 mt-8">
+      <div className="max-w-6xl mx-auto px-6 py-10 text-center">
+        <p className="text-white font-light text-lg mb-2">{profile.name || 'Marcelo Ralfi Poluakan'}</p>
+        <p className="text-white/45 text-sm font-light max-w-lg mx-auto mb-6">
+          {profile.headline ||
+            'Building technology-driven solutions through software development, leadership, and business-oriented problem solving.'}
+        </p>
+        <div className="flex justify-center gap-4 mb-6">
+          {social.github && (
+            <a
+              href={social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/15 transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={18} />
+            </a>
+          )}
+          {social.linkedin && (
+            <a
+              href={social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/15 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
+          )}
         </div>
+        <p className="text-white/35 text-xs font-light">
+          © {year} {profile.shortName || profile.name}. Built with React & Tailwind CSS.
+        </p>
       </div>
     </footer>
   );
