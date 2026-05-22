@@ -253,10 +253,41 @@
     }
   ],
   "certificates": [
-    { "id": 1, "title": "UVICSxUALS Workshop Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.49.13.jpeg" },
-    { "id": 2, "title": "Steering Committee PPI Tiongkok Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.49.41.jpeg" },
-    { "id": 3, "title": "PROXOCORIS International Competition Treasurer Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.50.03.jpeg" },
-    { "id": 4, "title": "UVICS Division Mentoring Certificate", "image": "/WhatsApp Image 2025-11-11 at 20.50.22.jpeg" }
+    {
+      "id": 1,
+      "title": "Chairman — PROXOCORIS International Competition 2026",
+      "image": "/chairperson.png"
+    },
+    {
+      "id": 2,
+      "title": "Treasurer — PROXOCORIS International Competition",
+      "image": "/Treasurer - Marcelo Ralfi Poluakan.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Steering Internal Development Division — UVICS",
+      "image": "/Steering Helper Indev - MarceloRalfiPoluakan.pdf"
+    },
+    {
+      "id": 4,
+      "title": "UVICSxUALS Workshop Certificate",
+      "image": "/WhatsApp Image 2025-11-11 at 20.49.13.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Steering Committee PPI Tiongkok Certificate",
+      "image": "/WhatsApp Image 2025-11-11 at 20.49.41.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "PROXOCORIS International Competition Treasurer Certificate",
+      "image": "/WhatsApp Image 2025-11-11 at 20.50.03.jpeg"
+    },
+    {
+      "id": 7,
+      "title": "UVICS Division Mentoring Certificate",
+      "image": "/WhatsApp Image 2025-11-11 at 20.50.22.jpeg"
+    }
   ],
   "contact": {
     "email": "ralffpoluakan@gmail.com",
